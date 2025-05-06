@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  background: linear-gradient(
+    90deg,
+    rgba(252, 179, 183, 1) 0%,
+    rgba(250, 213, 205, 1) 100%
+  );
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  border-radius: 5px;
+  margin: 10px;
+  background: linear-gradient(
+    90deg,
+    rgba(252, 179, 183, 1) 0%,
+    rgba(250, 213, 205, 1) 100%
+  );
+}
