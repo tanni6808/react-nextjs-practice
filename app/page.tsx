@@ -7,7 +7,9 @@ export default function Home() {
     <div className={styles.borderCard}>
       <div className={styles.cardTitle}>簡便的記帳小工具</div>
       <Link href="/records">
-        <Button text="開始使用" type="long" color="pink"></Button>
+        <Button type="long" color="pink">
+          <div className="text-2xl text-white p-2">開始使用</div>
+        </Button>
       </Link>
     </div>
   );

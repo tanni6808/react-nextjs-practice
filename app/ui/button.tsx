@@ -1,27 +1,24 @@
 import styles from "./ui.module.css";
 
 export default function Button({
-  text,
+  children,
   type,
   color,
+  onClick,
 }: {
-  text: string;
+  children: React.ReactNode;
   type: "long" | "short";
   color: "pink" | "green";
+  onClick?: () => void;
 }) {
   return (
     <button
       className={`${styles.button} ${
         type === "long" ? styles.longButton : styles.shortButton
       } ${color === "pink" ? styles.pinkButton : styles.greenButton}`}
+      onClick={onClick}
     >
-      <div
-        className={`${
-          type === "long" ? "text-2xl" : "text-base"
-        } text-white p-2`}
-      >
-        {text}
-      </div>
+      {children}
     </button>
   );
 }
