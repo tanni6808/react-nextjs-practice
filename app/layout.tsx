@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import styles from "./page.module.css";
 import Header from "./ui/header";
 import { Noto_Sans } from "next/font/google";
 import "./globals.css";
@@ -22,7 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${notoSans.className} antialiased`}>
         <Header />
-        {children}
+        <div className={styles.container}>{children}</div>
       </body>
     </html>
   );

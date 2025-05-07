@@ -11,15 +11,104 @@
 }
 
 .button {
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 300px;
   border-radius: 5px;
-  margin: 10px;
+  /* transition: all 0.2s; */
+}
+
+.longButton {
+  width: 300px;
+}
+
+.shortButton {
+  width: 80px;
+  height: 39px;
+}
+
+.pinkButton {
   background: linear-gradient(
     90deg,
     rgba(252, 179, 183, 1) 0%,
     rgba(250, 213, 205, 1) 100%
   );
+  box-shadow: 0px 5px #fcb3b7;
+}
+
+.pinkButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 8px #fcb3b7;
+}
+
+.pinkButton:active {
+  transform: translateY(1px);
+  box-shadow: 0px 4px #fcb3b7;
+}
+
+.greenButton {
+  background: linear-gradient(
+    90deg,
+    rgba(174, 225, 221, 1) 0%,
+    rgba(214, 229, 220, 1) 100%
+  );
+  box-shadow: 0px 5px #aee1dd;
+}
+
+.greenButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 8px #aee1dd;
+}
+
+.greenButton:active {
+  transform: translateY(1px);
+  box-shadow: 0px 4px #aee1dd;
+}
+
+.recTypeSelect {
+  width: 100px;
+  border-radius: 5px 0 0 5px;
+  color: white;
+}
+
+.pinkSelect {
+  background-color: #fcb3b7;
+}
+.greenSelect {
+  background-color: #aee1dd;
+}
+
+.recTypeSelect select {
+  appearance: none;
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.amountInput {
+  width: 80px;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.noteInput {
+  max-width: 250px;
+  padding-left: 10px;
+  border-radius: 0 5px 5px 0;
+  margin-right: 5px;
+}
+
+.pinkInput {
+  color: #fcb3b7;
+  border: 3px solid #fcb3b7;
+}
+
+.greenInput {
+  color: #aee1dd;
+  border: 3px solid #aee1dd;
+}
+
+.addRecord {
+  display: flex;
 }

@@ -1,14 +1,15 @@
 import Image from "next/image";
+import Link from "next/link";
 import Button from "./ui/button";
 import styles from "@/app/page.module.css";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <div className={styles.borderCard}>
-        <div className={styles.cardTitle}>簡便的記帳小工具</div>
-        <Button text="開始使用"></Button>
-      </div>
+    <div className={styles.borderCard}>
+      <div className={styles.cardTitle}>簡便的記帳小工具</div>
+      <Link href="/records">
+        <Button text="開始使用" type="long" color="pink"></Button>
+      </Link>
     </div>
 
     // <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
