@@ -112,3 +112,75 @@
 .addRecord {
   display: flex;
 }
+
+.recordList {
+  width: 400px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.recordList:hover {
+  background-color: #fffae8;
+}
+
+.recordList::before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 30px;
+  transform: translateX(142px);
+}
+
+.pinkRecordList {
+  color: #fcb3b7;
+}
+
+.pinkRecordList::before {
+  background: #fad5cd;
+}
+
+.greenRecordList {
+  color: #aee1dd;
+}
+
+.greenRecordList::before {
+  background: #d6e5dc;
+}
+
+.recordListAmount {
+  width: 137px;
+  text-align: right;
+  padding-right: 5px;
+}
+
+.recordListNote {
+  flex-grow: 1;
+  padding-left: 10px;
+}
+
+.delBtn {
+  border-radius: 5px;
+  padding: 0 8px;
+}
+
+.pinkDelBtn {
+  border: 3px solid #fcb3b7;
+  color: #fcb3b7;
+  transition: all 0.1s;
+}
+
+.pinkDelBtn:hover {
+  color: white;
+  background-color: #fcb3b7;
+}
+
+.greenDelBtn {
+  border: 3px solid #aee1dd;
+  color: #aee1dd;
+}
+
+.greenDelBtn:hover {
+  color: white;
+  background-color: #aee1dd;
+}

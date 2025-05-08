@@ -1,9 +1,9 @@
 "use client";
 import { useState } from "react";
 import { RecordItem } from "@/app/lib/definitions";
-import Select from "../select";
-import AmountInput from "../amount-input";
-import NoteInput from "../note-input";
+import Select from "./select";
+import AmountInput from "./amount-input";
+import NoteInput from "./note-input";
 import Button from "../button";
 import styles from "../ui.module.css";
 
@@ -16,8 +16,9 @@ export default function AddRecord({
   const [amount, setAmount] = useState<number>(0);
   const [note, setNote] = useState<string>("");
 
-  const handleClick = () => {
-    if (!amount) return;
+  const handleAddRecord = () => {
+    if (!amount) return alert("請輸入金額!");
+    if (note === "") return alert("請輸入備註!");
     onAddRecord({
       id: Date.now().toString(),
       type,
@@ -28,17 +29,23 @@ export default function AddRecord({
     setNote("");
   };
   return (
-    <div className={styles.addRecord}>
+    <form
+      className={styles.addRecord}
+      onSubmit={(e) => {
+        e.preventDefault();
+        handleAddRecord();
+      }}
+    >
       <Select type={type} onChangeType={setType} />
       <AmountInput type={type} value={amount} onChange={setAmount} />
       <NoteInput type={type} value={note} onChange={setNote} />
       <Button
-        type="short"
+        type="submit"
+        style="short"
         color={type === "expense" ? "pink" : "green"}
-        onClick={handleClick}
       >
         <div className="text-base text-white p-2">新增</div>
       </Button>
-    </div>
+    </form>
   );
 }

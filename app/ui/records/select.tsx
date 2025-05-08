@@ -1,5 +1,5 @@
 "use client";
-import styles from "./ui.module.css";
+import styles from "../ui.module.css";
 import clsx from "clsx";
 
 export default function Select({
