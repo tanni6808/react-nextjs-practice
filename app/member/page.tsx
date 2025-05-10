@@ -27,7 +27,7 @@ export default function Page() {
       }
     });
     return () => unsubscribe();
-  }, []);
+  });
 
   if (isLoading) {
     return <div className="text-gray-500">確認登入狀態...</div>;

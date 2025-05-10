@@ -25,7 +25,7 @@ export default function Home() {
       }
     });
     return () => unsubscribe();
-  }, []);
+  });
 
   if (isLoading) {
     return <div className="text-gray-500">載入中...</div>;
