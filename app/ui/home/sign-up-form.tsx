@@ -14,7 +14,6 @@ export default function SignUpForm() {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [pw, setPw] = useState<string>("");
-  const notify = (message: string) => toast(message);
   const showErrorToast = (error: any) => toast.error(error);
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

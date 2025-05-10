@@ -14,9 +14,7 @@ export default function SignInForm({ onSuccess }: { onSuccess: () => void }) {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const userCredential = await signInWithEmailAndPassword(auth, email, pw);
-      const loggedInUser = userCredential.user;
-      // alert(`歡迎回來，${loggedInUser.displayName}!`);
+      await signInWithEmailAndPassword(auth, email, pw);
       onSuccess();
     } catch (err: any) {
       notify();
