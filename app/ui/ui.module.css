@@ -232,5 +232,7 @@
 
 .fieldHolder > input:valid,
 .fieldHolder > input:is(:-webkit-autofill, :autofill) {
-  background-color: white;
+  background-color: white !important;
+  -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+  -webkit-text-fill-color: #6b7280 !important;
 }

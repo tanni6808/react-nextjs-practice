@@ -37,9 +37,9 @@ export default function Page() {
       <div className={styles.borderCard}>
         <div className="my-4">
           <div className={`${styles.cardTitle} text-2xl`}>
-            歡迎，{auth.currentUser?.displayName}！
+            歡迎回來，{auth.currentUser?.displayName}！
           </div>
-          <div className="flex justify-around">
+          <div className="flex gap-4 justify-center">
             <Link href={"/records"}>
               <Button type="button" style="short" color="pink">
                 <div className="p-2 text-white text-base">開始使用</div>
