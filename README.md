@@ -43,21 +43,21 @@
 
 - 首頁
 
-  ![Index Feature](/public/readme/feature1.png)
+    <img src="/public/readme/feature1.png" alt="Index Feature" width="200">
 
   - 登入會員
   - 註冊會員
 
 - 會員頁面
 
-  ![Member Feature](/public/readme/feature2.png)
+    <img src="/public/readme/feature2.png" alt="Member Feature" width="200">
 
   - 進入記帳頁面
   - 登出
 
 - 記帳頁面
 
-  ![Record Feature](/public/readme/feature3.png)
+    <img src="/public/readme/feature3.png" alt="Record Feature" width="200">
 
   - 紀錄支出
   - 紀錄收入
