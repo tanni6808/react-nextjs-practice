@@ -34,6 +34,8 @@ export default function Home() {
     <div>
       <div className={`${styles.cardTitle} text-2xl`}>簡便的記帳小工具</div>
       <div className={styles.borderCard}>
+        <div className="text-[#fcb3b7]">歡迎使用測試帳號：</div>
+        <div className="text-[#fcb3b7]">test1@mail.com/123456</div>
         <SignInForm onSuccess={handleSignInSuccess} />
         <div className={styles.cardDivider}>或</div>
         <SignUpForm />

@@ -10,7 +10,7 @@ const notoSans = Noto_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "React & Next.js Practice",
+  title: "Accounting",
   description: "A simple accounting app",
 };
 

@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# [Accounting](https://react-nextjs-practice-tau.vercel.app/)
 
-## Getting Started
+簡單的線上記帳小工具。
 
-First, run the development server:
+# 測試帳號
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+|     | 帳號           | 密碼   |
+| --- | -------------- | ------ |
+| 1   | test1@mail.com | 123456 |
+| 2   | test2@mail.com | 123456 |
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# 目錄
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- [主要功能](#主要功能)
+- [技術堆疊](#技術堆疊)
+- [功能細節](#功能細節)
+- [聯絡我](#聯絡我)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# 主要功能
 
-## Learn More
+1. 登入或註冊會員
 
-To learn more about Next.js, take a look at the following resources:
+2. 進行記帳
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# 技術堆疊
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+前端
 
-## Deploy on Vercel
+- 框架：[React](https://react.dev/), [Next.js](https://nextjs.org/)
+- 語言：[TypeScript](https://www.typescriptlang.org/)
+- 第三方套件: [clsx](https://github.com/lukeed/clsx), [react-toastify](https://github.com/fkhadra/react-toastify)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+後端及資料庫
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- 帳號驗證：Firebase Authentication
+- 資料儲存：Firebase Firestore Database
+
+部屬
+
+- [Vercel](https://vercel.com/)
+
+# 功能細節
+
+- 首頁
+
+  ![Index Feature](/public/readme/feature1.png)
+
+  - 登入會員
+  - 註冊會員
+
+- 會員頁面
+
+  ![Member Feature](/public/readme/feature2.png)
+
+  - 進入記帳頁面
+  - 登出
+
+- 記帳頁面
+
+  ![Record Feature](/public/readme/feature3.png)
+
+  - 紀錄支出
+  - 紀錄收入
+
+# 聯絡我
+
+如有任何問題或建議，歡迎您透過下列方式聯絡：
+
+email: [tanni6808450@gmail.com](mailto:tanni6808450@gmail.com)

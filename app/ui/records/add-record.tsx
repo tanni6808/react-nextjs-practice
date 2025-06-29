@@ -44,16 +44,32 @@ export default function AddRecord() {
         handleAddRecord();
       }}
     >
-      <Select type={type} onChangeType={setType} />
-      <AmountInput type={type} value={amount} onChange={setAmount} />
-      <NoteInput type={type} value={note} onChange={setNote} />
-      <Button
-        type="submit"
-        style="short"
-        color={type === "expense" ? "pink" : "green"}
-      >
-        <div className="text-base text-white p-2">新增</div>
-      </Button>
+      <div className="flex max-sm:flex-col items-center gap-2">
+        <div className="flex">
+          <Select type={type} onChangeType={setType} />
+          <AmountInput type={type} value={amount} onChange={setAmount} />
+          <NoteInput type={type} value={note} onChange={setNote} />
+        </div>
+        <div className="sm:hidden">
+          <Button
+            type="submit"
+            style="long"
+            color={type === "expense" ? "pink" : "green"}
+          >
+            <div className="text-base text-white p-2">新增</div>
+          </Button>
+        </div>
+        <div className="max-sm:hidden">
+          <Button
+            type="submit"
+            style="short"
+            color={type === "expense" ? "pink" : "green"}
+          >
+            <div className="text-base text-white p-2">新增</div>
+          </Button>
+        </div>
+      </div>
+
       <ToastContainer position="top-center" autoClose={2000} />
     </form>
   );

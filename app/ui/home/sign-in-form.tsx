@@ -8,8 +8,8 @@ import { auth } from "../../lib/firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 
 export default function SignInForm({ onSuccess }: { onSuccess: () => void }) {
-  const [email, setEmail] = useState<string>("");
-  const [pw, setPw] = useState<string>("");
+  const [email, setEmail] = useState<string>("test1@mail.com");
+  const [pw, setPw] = useState<string>("123456");
   const notify = () => toast.error("電子郵件地址或密碼輸入錯誤!");
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
