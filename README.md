@@ -20,9 +20,15 @@
 
 1. 登入或註冊會員
 
+  <img src="./assets/feature_1.png" alt="Index Feature" width="240">
+
 2. 進行記帳
 
+  <img src="./assets/feature_2.png" alt="Record Feature" width="240">
+
 # 技術堆疊
+
+![Tech Stack](./assets/tech-stack.png)
 
 前端
 
@@ -33,37 +39,12 @@
 後端及資料庫
 
 - 帳號驗證：Firebase Authentication
-- 資料儲存：Firebase Firestore Database
+- 資料儲存：Cloud Firestore Database
 
 部屬
 
 - [Vercel](https://vercel.com/)
 
-# 功能細節
-
-- 首頁
-
-    <img src="/public/readme/feature1.png" alt="Index Feature" width="200">
-
-  - 登入會員
-  - 註冊會員
-
-- 會員頁面
-
-    <img src="/public/readme/feature2.png" alt="Member Feature" width="200">
-
-  - 進入記帳頁面
-  - 登出
-
-- 記帳頁面
-
-    <img src="/public/readme/feature3.png" alt="Record Feature" width="200">
-
-  - 紀錄支出
-  - 紀錄收入
-
 # 聯絡我
-
-如有任何問題或建議，歡迎您透過下列方式聯絡：
 
 email: [tanni6808450@gmail.com](mailto:tanni6808450@gmail.com)
