@@ -20,11 +20,11 @@
 
 1. 登入或註冊會員
 
-  <img src="./assets/feature_1.png" alt="Index Feature" width="240">
+  <img src="./assets/feature_1.png" alt="Index Feature" width="300">
 
 2. 進行記帳
 
-  <img src="./assets/feature_2.png" alt="Record Feature" width="240">
+  <img src="./assets/feature_2.png" alt="Record Feature" width="300">
 
 # 技術堆疊
 
