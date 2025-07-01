@@ -1,6 +1,6 @@
 # [Accounting](https://react-nextjs-practice-tau.vercel.app/)
 
-簡單的線上記帳小工具。
+簡單的線上記帳小工具。以 React 及 Next.js 作為前端框架，並使用 Google Firebase 服務進行會員帳號驗證以及資料存取。
 
 # 測試帳號
 
@@ -39,7 +39,7 @@
 後端及資料庫
 
 - 帳號驗證：Firebase Authentication
-- 資料儲存：Cloud Firestore Database
+- 資料存取：Cloud Firestore Database
 
 部屬
 
