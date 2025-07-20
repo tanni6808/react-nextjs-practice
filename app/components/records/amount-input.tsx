@@ -15,7 +15,7 @@ export default function AmountInput({
         type === "expense" ? styles.pinkInput : styles.greenInput
       }`}
       type="number"
-      min={0}
+      min={1}
       value={value}
       onChange={(e) => onChange(Number(e.target.value))}
       placeholder="金額"
