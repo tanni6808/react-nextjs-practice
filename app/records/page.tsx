@@ -1,9 +1,9 @@
 "use client";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import AddRecord from "../ui/records/add-record";
-import RecordList from "../ui/records/record-list";
-import Button from "../ui/button";
+import AddRecord from "../components/records/add-record";
+import RecordList from "../components/records/record-list";
+import Button from "../components/button";
 import Link from "next/link";
 import { auth } from "../lib/firebase";
 import { onAuthStateChanged, User } from "firebase/auth";
