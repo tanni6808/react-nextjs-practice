@@ -1,3 +1,12 @@
+:root {
+  --primary-light: rgba(250, 213, 205, 1);
+  --primary-dark: rgba(252, 179, 183, 1);
+  --secondary-light: rgba(214, 229, 220, 1);
+  --secondary-dark: rgba(174, 225, 221, 1);
+  --highlight: #fffae8;
+  --text: #6b7280;
+}
+
 .header {
   display: flex;
   justify-content: center;
@@ -6,8 +15,8 @@
   outline: none;
   background: linear-gradient(
     90deg,
-    rgba(252, 179, 183, 1) 0%,
-    rgba(250, 213, 205, 1) 100%
+    var(--primary-dark) 0%,
+    var(--primary-light) 100%
   );
 }
 
@@ -33,39 +42,39 @@
 .pinkButton {
   background: linear-gradient(
     90deg,
-    rgba(252, 179, 183, 1) 0%,
-    rgba(250, 213, 205, 1) 100%
+    var(--primary-dark) 0%,
+    var(--primary-light) 100%
   );
-  box-shadow: 0px 5px #fcb3b7;
+  box-shadow: 0px 5px var(--primary-dark);
 }
 
 .pinkButton:hover {
   transform: translateY(-3px);
-  box-shadow: 0px 8px #fcb3b7;
+  box-shadow: 0px 8px var(--primary-dark);
 }
 
 .pinkButton:active {
   transform: translateY(1px);
-  box-shadow: 0px 4px #fcb3b7;
+  box-shadow: 0px 4px var(--primary-dark);
 }
 
 .greenButton {
   background: linear-gradient(
     90deg,
-    rgba(174, 225, 221, 1) 0%,
-    rgba(214, 229, 220, 1) 100%
+    var(--secondary-dark) 0%,
+    var(--secondary-light) 100%
   );
-  box-shadow: 0px 5px #aee1dd;
+  box-shadow: 0px 5px var(--secondary-dark);
 }
 
 .greenButton:hover {
   transform: translateY(-3px);
-  box-shadow: 0px 8px #aee1dd;
+  box-shadow: 0px 8px var(--secondary-dark);
 }
 
 .greenButton:active {
   transform: translateY(1px);
-  box-shadow: 0px 4px #aee1dd;
+  box-shadow: 0px 4px var(--secondary-dark);
 }
 
 .recTypeSelect {
@@ -75,10 +84,10 @@
 }
 
 .pinkSelect {
-  background-color: #fcb3b7;
+  background-color: var(--primary-dark);
 }
 .greenSelect {
-  background-color: #aee1dd;
+  background-color: var(--secondary-dark);
 }
 
 .recTypeSelect select {
@@ -101,13 +110,13 @@
 }
 
 .pinkInput {
-  color: #fcb3b7;
-  border: 3px solid #fcb3b7;
+  color: var(--primary-dark);
+  border: 3px solid var(--primary-dark);
 }
 
 .greenInput {
-  color: #aee1dd;
-  border: 3px solid #aee1dd;
+  color: var(--secondary-dark);
+  border: 3px solid var(--secondary-dark);
 }
 
 .addRecord {
@@ -122,7 +131,7 @@
 }
 
 .recordList:hover {
-  background-color: #fffae8;
+  background-color: var(--highlight);
 }
 
 .recordList::before {
@@ -134,19 +143,19 @@
 }
 
 .pinkRecordList {
-  color: #fcb3b7;
+  color: var(--primary-dark);
 }
 
 .pinkRecordList::before {
-  background: #fad5cd;
+  background: var(--primary-light);
 }
 
 .greenRecordList {
-  color: #aee1dd;
+  color: var(--secondary-dark);
 }
 
 .greenRecordList::before {
-  background: #d6e5dc;
+  background: var(--secondary-light);
 }
 
 .recordListAmount {
@@ -167,24 +176,24 @@
 }
 
 .pinkDelBtn {
-  border: 3px solid #fcb3b7;
-  color: #fcb3b7;
+  border: 3px solid var(--primary-dark);
+  color: var(--primary-dark);
   transition: all 0.1s;
 }
 
 .pinkDelBtn:hover {
   color: white;
-  background-color: #fcb3b7;
+  background-color: var(--primary-dark);
 }
 
 .greenDelBtn {
-  border: 3px solid #aee1dd;
-  color: #aee1dd;
+  border: 3px solid var(--secondary-dark);
+  color: var(--secondary-dark);
 }
 
 .greenDelBtn:hover {
   color: white;
-  background-color: #aee1dd;
+  background-color: var(--secondary-dark);
 }
 
 .form {
@@ -203,9 +212,9 @@
 }
 
 .fieldHolder > input {
-  color: #6b7280;
+  color: var(--text);
   outline: none;
-  border: 2px solid #fcb3b7;
+  border: 2px solid var(--primary-dark);
   border-radius: 5px;
   height: 40px;
   width: 300px;
@@ -216,14 +225,14 @@
   position: absolute;
   top: 8px;
   left: 10px;
-  color: #fad5cd;
+  color: var(--primary-light);
   cursor: text;
   transition: 0.2s ease-in-out;
 }
 
 .fieldHolder > input:focus + label,
 .fieldHolder > input:not(:placeholder-shown) + label {
-  color: #fcb3b7;
+  color: var(--primary-dark);
   top: -10px;
   font-size: 12px;
   background-color: white;
@@ -234,5 +243,5 @@
 .fieldHolder > input:is(:-webkit-autofill, :autofill) {
   background-color: white !important;
   -webkit-box-shadow: 0 0 0px 1000px white inset !important;
-  -webkit-text-fill-color: #6b7280 !important;
+  -webkit-text-fill-color: var(--text) !important;
 }
