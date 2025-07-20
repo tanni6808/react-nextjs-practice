@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import styles from "./page.module.css";
-import Header from "./ui/header";
+import Header from "./components/header";
 import { Noto_Sans } from "next/font/google";
 import "./globals.css";
 

@@ -3,8 +3,8 @@
 import styles from "@/app/page.module.css";
 import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
-import SignInForm from "./ui/home/sign-in-form";
-import SignUpForm from "./ui/home/sign-up-form";
+import SignInForm from "./components/index/sign-in-form";
+import SignUpForm from "./components/index/sign-up-form";
 import { auth } from "./lib/firebase";
 import { onAuthStateChanged, User } from "firebase/auth";
 

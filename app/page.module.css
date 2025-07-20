@@ -1,13 +1,13 @@
 .bgPink {
   background: linear-gradient(
     90deg,
-    rgba(252, 179, 183, 1) 0%,
-    rgba(250, 213, 205, 1) 100%
+    var(--primary-dark) 0%,
+    var(--primary-light) 100%
   );
 }
 
 .borderGreen {
-  border-color: #aee1dd;
+  border-color: var(--secondary-dark);
 }
 
 .container {
@@ -25,20 +25,20 @@
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  border: 4px solid #aee1dd;
+  border: 4px solid var(--secondary-dark);
   max-width: 400px;
   padding: 10px;
 }
 
 .cardTitle {
-  color: #fcb3b7;
+  color: var(--primary-dark);
   margin-bottom: 10px;
   text-align: center;
 }
 
 .cardDivider {
   margin-top: 12px;
-  color: #aee1dd;
+  color: var(--secondary-dark);
 }
 
 .cardDivider::before {
@@ -47,7 +47,7 @@
   width: 130px;
   height: 2px;
   transform: translate(-10px, -5px);
-  background: #aee1dd;
+  background: var(--secondary-dark);
 }
 
 .cardDivider::after {
@@ -56,5 +56,5 @@
   width: 130px;
   height: 2px;
   transform: translate(10px, -5px);
-  background: #aee1dd;
+  background: var(--secondary-dark);
 }
