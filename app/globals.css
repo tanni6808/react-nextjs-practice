@@ -3,6 +3,12 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary-light: rgb(248, 180, 165);
+  --primary-dark: rgb(247, 165, 169);
+  --secondary-light: rgb(183, 217, 197);
+  --secondary-dark: rgb(147, 214, 208);
+  --highlight: #fffae8;
+  --text: #6b7280;
 }
 
 @theme inline {
