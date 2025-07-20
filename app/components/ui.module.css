@@ -1,8 +1,8 @@
 :root {
-  --primary-light: rgba(250, 213, 205, 1);
-  --primary-dark: rgba(252, 179, 183, 1);
-  --secondary-light: rgba(214, 229, 220, 1);
-  --secondary-dark: rgba(174, 225, 221, 1);
+  --primary-light: rgb(248, 180, 165);
+  --primary-dark: rgb(247, 165, 169);
+  --secondary-light: rgb(183, 217, 197);
+  --secondary-dark: rgb(147, 214, 208);
   --highlight: #fffae8;
   --text: #6b7280;
 }
@@ -114,9 +114,19 @@
   border: 3px solid var(--primary-dark);
 }
 
+.pinkInput::placeholder {
+  color: var(--primary-dark);
+  opacity: 0.8;
+}
+
 .greenInput {
   color: var(--secondary-dark);
   border: 3px solid var(--secondary-dark);
+}
+
+.greenInput::placeholder {
+  color: var(--secondary-dark);
+  opacity: 0.8;
 }
 
 .addRecord {

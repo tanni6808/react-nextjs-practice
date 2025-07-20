@@ -1,7 +1,7 @@
 :root {
-  --primary-light: rgba(250, 213, 205, 1);
-  --primary-dark: rgba(252, 179, 183, 1);
-  --secondary-dark: rgba(174, 225, 221, 1);
+  --primary-light: rgb(248, 180, 165);
+  --primary-dark: rgb(247, 165, 169);
+  --secondary-dark: rgb(147, 214, 208);
 }
 
 .bgPink {
