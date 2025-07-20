@@ -1,66 +1,23 @@
 import { RecordItem } from "@/app/lib/definitions";
 import DeleteBtn from "./delete-btn";
 import styles from "../ui.module.css";
-import { auth, db } from "../../lib/firebase";
+import { auth } from "../../lib/firebase";
 import { useState, useEffect } from "react";
-import {
-  collection,
-  query,
-  orderBy,
-  onSnapshot,
-  doc,
-  deleteDoc,
-} from "firebase/firestore";
 
-export default function RecordList() {
-  const [records, setRecords] = useState<RecordItem[]>([]);
+export default function RecordList({
+  records,
+  onDelete,
+}: {
+  records: RecordItem[];
+  onDelete: (recordId: string) => void;
+}) {
   const [isLoading, setIsLoading] = useState(true);
   const user = auth.currentUser;
-  const handleDelRecord = async (recordId: string) => {
-    if (!user || !recordId) {
-      alert("ID不存在!");
-      return;
-    }
-    try {
-      const recordRef = doc(db, "users", user.uid, "records", recordId);
-      await deleteDoc(recordRef);
-    } catch (err) {
-      alert(`無法刪除資料(${err})，請稍後再試。`);
-    }
-  };
   useEffect(() => {
-    if (!user) {
-      setRecords([]);
+    if (user) {
       setIsLoading(false);
       return;
     }
-    const recordsQuery = query(
-      collection(db, "users", user.uid, "records"),
-      orderBy("createdAt", "desc")
-    );
-    const unsubscribe = onSnapshot(
-      recordsQuery,
-      (querySnapshot) => {
-        const recordsData: RecordItem[] = [];
-        querySnapshot.forEach((doc) => {
-          const record = {
-            id: doc.id,
-            type: doc.data().type,
-            amount: doc.data().amount,
-            note: doc.data().note,
-          } as RecordItem;
-          recordsData.push(record);
-        });
-        setRecords(recordsData);
-        setIsLoading(false);
-      },
-      (err) => {
-        setIsLoading(false);
-        alert(`無法取得資料(${err})，請稍後再試。`);
-        throw err;
-      }
-    );
-    return () => unsubscribe();
   }, [user?.uid]);
 
   if (isLoading) {
@@ -86,7 +43,7 @@ export default function RecordList() {
             <div className={styles.recordListNote}>{item.note}</div>
             <DeleteBtn
               color={item.type === "expense" ? "pink" : "green"}
-              onClick={() => handleDelRecord(item.id)}
+              onClick={() => onDelete(item.id)}
             />
           </li>
         ))}
