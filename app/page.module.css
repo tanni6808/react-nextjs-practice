@@ -1,9 +1,3 @@
-:root {
-  --primary-light: rgb(248, 180, 165);
-  --primary-dark: rgb(247, 165, 169);
-  --secondary-dark: rgb(147, 214, 208);
-}
-
 .bgPink {
   background: linear-gradient(
     90deg,
